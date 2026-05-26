@@ -9,6 +9,7 @@
     "dev:api": "node scripts/local-api-server.mjs",
     "build": "vite build --config frontend/vite.config.js",
     "preview": "vite preview --config frontend/vite.config.js",
+    "postinstall": "prisma generate",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio"

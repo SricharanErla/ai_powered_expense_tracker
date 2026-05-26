@@ -30,6 +30,16 @@ A modern serverless AI-powered expense tracker built with React, Vite, Tailwind 
 
 Deploy the repository to Vercel with the default build command `npm run build`.
 Set `DATABASE_URL` in the Vercel environment variables.
+The backend is deployed from the `api/` folder as Vercel Serverless Functions, so each route is available directly under `/api/*` in production.
+
+Before deploying, ensure Prisma is generated during install and the Neon schema has been applied with `prisma db push` or your preferred migration flow.
+
+### Production backend checklist
+
+1. Set `DATABASE_URL` in Vercel.
+2. Set `OPENAI_API_KEY` if you later connect a real AI provider.
+3. Deploy the repository to Vercel so the `api/` folder becomes the backend.
+4. Run `prisma db push` against Neon before the first production request.
 
 ## API Routes
 
